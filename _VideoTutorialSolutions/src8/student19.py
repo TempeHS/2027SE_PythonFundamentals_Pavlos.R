@@ -1,4 +1,33 @@
 # Adds @property for name
+#
+# EXPLANATION:
+# Now BOTH name and house are protected by properties!
+#
+# KEY CONCEPTS:
+# - Each property needs a getter and setter
+# - All attributes that need validation should be properties
+# - The underscore versions store actual data (_name, _house)
+#
+# PROPERTIES IN THIS CLASS:
+# 1. name property:
+#    - @property def name: returns self._name (getter)
+#    - @name.setter def name: validates and sets self._name
+#
+# 2. house property:
+#    - @property def house: returns self._house (getter)
+#    - @house.setter def house: validates and sets self._house
+#
+# NOW IN __INIT__:
+# self.name = name   # Uses name setter (validates!)
+# self.house = house # Uses house setter (validates!)
+#
+# FULLY PROTECTED:
+# - Can't create with empty name
+# - Can't create with invalid house
+# - Can't CHANGE to empty name
+# - Can't CHANGE to invalid house
+#
+# See student20.py for @classmethod - alternative constructors!
 
 
 class Student:

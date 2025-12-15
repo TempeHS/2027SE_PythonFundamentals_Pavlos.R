@@ -1,4 +1,27 @@
 # Prompts for patronus too, but doesn't display yet
+#
+# EXPLANATION:
+# Classes can have multiple attributes - here we add a third!
+#
+# KEY CONCEPTS:
+# - Add new parameter and attribute in __init__
+# - Validate all data that needs validation
+# - Store the new attribute: self.patronus = patronus
+#
+# PATRONUS:
+# In Harry Potter, a Patronus is a protective charm.
+# Here we add it as a third attribute of Student.
+#
+# CHANGES FROM PREVIOUS:
+# 1. __init__ now takes name, house, patronus
+# 2. self.patronus = patronus stores it
+# 3. __str__ doesn't show it yet (just name and house)
+#
+# NOTE:
+# No validation for patronus yet - that comes in the next
+# version. Here we're just collecting the data.
+#
+# See student16.py for adding a METHOD to use the patronus!
 
 
 class Student:
