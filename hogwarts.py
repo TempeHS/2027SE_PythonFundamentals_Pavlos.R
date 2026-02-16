@@ -1,10 +1,15 @@
-students = ["Hermoine", "Harry", "Ron"]
+students = [
+    {"Name": "Hermoine", "House": "Gryffindor", "Patronus": "Otter"},
+    {"Name": "Harry", "House": "Gryffindor", "Patronus": "Stag"},
+    {"Name": "Ron", "House": "Gryffindor", "Patronus": "Jack Russel Terrier"},
+    {"Name": "Draco", "House": "Slytherin", "Patronus": None},
+]
 
 
 def main():
 
-    for i in range(len(students)):
-        print(i + 1, students[i])
+    for student in students:
+        print(student["Name"], student["House"], student["Patronus"], sep=", ")
 
 
 main()
