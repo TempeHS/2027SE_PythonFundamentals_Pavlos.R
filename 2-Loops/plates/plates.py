@@ -44,7 +44,7 @@ def letter_check(string):
 def valid_value_check(string):
     value = len(string)
     for i in range(len(string)):
-        if string[i].isnumeric or string[i].isalpha():
+        if string[i].isnumeric or string[i].isascii():
             value -= 1
         else:
             print("Error! Only numbers and letters are allowed!")
@@ -60,8 +60,9 @@ def number_check(string):
 
             _, middle, right = string.partition(string[i])
 
-            if right.isnumeric() == False and right is not None:
+            if right.isnumeric() == False and right != "":
                 print("Error! Number plate has a number before a letter")
+
                 return False
 
             elif middle == "0":
@@ -70,6 +71,8 @@ def number_check(string):
 
             else:
                 return True
+        else:
+            return True
 
 
 main()
