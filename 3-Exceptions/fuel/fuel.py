@@ -1,12 +1,28 @@
 def main():
 
-    fract_convert(input("What Is Your Fuel? "))
+    try:
 
+        x, y = input("What Is Your Fuel? ").split("/")
+        x = int(x)
+        y = int(y)
 
-def fract_convert(fuel):
+        text = x / y
+    except ValueError:
+        main()
+    except ZeroDivisionError:
+        main()
+    else:
 
-    x, y = fuel.split("/")
-    print(x / y * 100 + "%")
+        if text < 1 and text > 0:
+            print(str(text * 100) + "%")
+
+        elif text == 1:
+            print("F")
+
+        elif text == 0:
+            print("E")
+        else:
+            main()
 
 
 main()
