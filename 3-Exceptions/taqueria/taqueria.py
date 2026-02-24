@@ -14,7 +14,7 @@ menu = {
 def main():
     MONEY = 0
     while True:
-        text = input("What would you like? ")
+        text = input("What would you like? ").title()
         try:
 
             MONEY += menu[text]
