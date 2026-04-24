@@ -9,7 +9,7 @@ def test_lowercase():
 
 def test_uppercase():
     assert shorten("Ddf") == "Ddf"
-    assert shorten("Hello") == "Hll"
+    assert shorten("HEllo") == "Hll"
     assert shorten("dauiN") == "dN"
 
 

@@ -8,7 +8,13 @@ def main():
 def shorten(text):
     new_text = str()
     for i in text:
-        if i == "a" or i == "e" or i == "i" or i == "o" or i == "u":
+        if (
+            i.lower() == "a"
+            or i.lower() == "e"
+            or i.lower() == "i"
+            or i.lower() == "o"
+            or i.lower() == "u"
+        ):
             continue
         else:
             new_text += i
